@@ -14,7 +14,7 @@ def driver():
     
     # Путь к твоему APK. Мы используем os.path.abspath, чтобы 
     # путь был верным на любом компе.
-    options.app = os.path.abspath("apps/mda-1.0.22-26.apk") 
+    options.app = os.path.abspath("apps/mda-2.2.0-25.apk") 
     
     # Модель драйвера
     options.automation_name = "UIAutomator2"
