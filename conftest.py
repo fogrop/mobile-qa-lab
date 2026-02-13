@@ -15,9 +15,11 @@ def driver():
     # Путь к твоему APK. Мы используем os.path.abspath, чтобы 
     # путь был верным на любом компе.
     options.app = os.path.abspath("apps/mda-2.2.0-25.apk") 
-    
+
     # Модель драйвера
     options.automation_name = "UIAutomator2"
+    options.set_capability("appWaitActivity", "com.saucelabs.mydemoapp.android.view.activities.*")
+    options.set_capability("appWaitDuration", 30000) # Ждать запуска до 30 секунд
     
     # Соединяемся с сервером Appium (он должен быть запущен!)
     # По умолчанию он слушает порт 4723
