@@ -21,3 +21,5 @@ class BasePage:
         element = self.find_element(locator)
         element.clear()
         element.send_keys(text)
+    def wait_for_invisibility(self, locator):
+        return self.wait.until(EC.invisibility_of_element_located(locator))
